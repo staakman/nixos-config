@@ -5,4 +5,7 @@
     enable = true;
     vimAlias = true;
   };
+
+  programs.neovim.defaultEditor = true;
 }
+

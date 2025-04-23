@@ -11,6 +11,7 @@
     kitty             # terminal
     wl-clipboard      # copy pasta 
     gcc               # c compiler
+    home-manager
   ];
 
   programs.git = {
@@ -18,6 +19,13 @@
     userName = "Thierry Staakman";
     userEmail = "thierry@example.com";
   };
+
+  programs.ssh = {
+    enable = true;
+    addKeysToAgent = "yes";
+  };
+
+  programs.home-manager.enable = true;
 
   home.file.".config/waybar/config".source = ./waybar-config.json;
   home.file.".config/waybar/style.css".source = ./waybar-style.css;

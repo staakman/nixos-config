@@ -133,15 +133,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim					# FILE EDITOR
-    kitty				# TERMINAL / EDITOR
+    vim                     # FILE EDITOR
+    kitty                   # TERMINAL / EDITOR
     greetd.tuigreet
-    hyprland				# WINDOW HANDLER
-    waybar				# TOP BAR
-    wofi
+    hyprland                # WINDOW HANDLER
+    waybar                  # TOP BAR
+    wofi 
     wl-clipboard
     git
-    networkmanagerapplet 		# NETWORK MANAGER
+    networkmanagerapplet    # NETWORK MANAGER
     font-awesome
     ntfs3g
     vlc
