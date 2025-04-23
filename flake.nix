@@ -15,6 +15,7 @@
       modules = [
         ./hosts/nixos.nix
         ./hosts/hardware-configuration.nix
+	./modules/nvim.nix
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
