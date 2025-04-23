@@ -145,7 +145,13 @@
     font-awesome
     ntfs3g
     vlc
+    neovim
     #wget
+  ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    nerdfonts
   ];
 
   environment.sessionVariables = {
@@ -156,16 +162,17 @@
     WLR_RENDERER_ALLOW_SOFTWARE = "1";
     NIXOS_OZONE_WL = "1";
     EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
