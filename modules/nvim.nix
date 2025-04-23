@@ -1,6 +1,8 @@
-programs.neovim = {
-  enable = true;
-  package = pkgs.neovim-nightly;
-  vimAlias = true;
-  vimdiffAlias = true;
-};
+{ config, pkgs, ... }:
+
+{
+  programs.neovim = {
+    enable = true;
+    vimAlias = true;
+  };
+}

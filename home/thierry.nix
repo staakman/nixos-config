@@ -4,12 +4,13 @@
   home.homeDirectory = "/home/thierry";
 
   home.packages = with pkgs; [
-    neofetch
-    firefox
-    waybar
-    rofi-wayland
-    kitty
-    wl-clipboard
+    neofetch          # system info
+    firefox		        # browser
+    waybar		        # top bar
+    rofi-wayland      # ?
+    kitty             # terminal
+    wl-clipboard      # copy pasta 
+    gcc               # c compiler
   ];
 
   programs.git = {
