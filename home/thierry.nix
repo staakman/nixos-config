@@ -27,8 +27,8 @@
 
   programs.home-manager.enable = true;
 
-  home.file.".config/waybar/config".source = ./waybar-config.json;
-  home.file.".config/waybar/style.css".source = ./waybar-style.css;
+  home.file.".config/waybar/config".source = ./../modules/waybar/waybar-config.json;
+  home.file.".config/waybar/style.css".source = ./../modules/waybar/waybar-style.css;
 
   home.stateVersion = "24.11";
 }
