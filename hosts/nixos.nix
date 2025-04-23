@@ -143,6 +143,8 @@
     git
     networkmanagerapplet 		# NETWORK MANAGER
     font-awesome
+    ntfs3g
+    vlc
     #wget
   ];
 
