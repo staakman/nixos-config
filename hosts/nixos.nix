@@ -151,7 +151,7 @@
 
   fonts.packages = with pkgs; [
     noto-fonts
-    nerdfonts
+    nerd-fonts.jetbrains-mono         # nice font
   ];
 
   environment.sessionVariables = {
