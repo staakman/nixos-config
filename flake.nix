@@ -12,10 +12,28 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nur.url = "github:nix-community/NUR";
+    betterfox = {
+      url = "github:yokoffing/Betterfox";
+      flake = false;
+    };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }: let
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
+    
     system = "x86_64-linux";
+    
+    settings = {
+      browser = "firefox";
+      terminalFileManager = "yazi";
+      terminal = "kitty";
+      kbdLayout = "gb";
+      kbdVariant = "extd";
+      wallpaper = "Train.jpg"; # see modules/themes/wallpapers
+    };
+    
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = system;
@@ -31,10 +49,27 @@
           ./modules/programs/browser/firefox
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
+          ./modules/programs/cli/yazi
           ./modules/programs/editor/nvim
           ./modules/programs/shell/bash
           ./modules/programs/shell/zsh
           ./modules/programs/terminal/kitty
+
+          { nixpkgs.overlays = [ inputs.nur.overlay ]; }
+
+
+          {
+            _module.args = {
+              self = self;
+              inputs = inputs; 
+              browser = settings.browser;
+              terminalFileManager = settings.terminalFileManager;
+              terminal = settings.terminal;
+              kbdVariant = settings.kbdVariant;
+              kbdLayout = settings.kbdLayout;
+              wallpaper = settings.wallpaper;
+            };
+          }
 
           home-manager.nixosModules.home-manager
           {
