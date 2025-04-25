@@ -9,7 +9,7 @@
   ...
 }: {
   imports = [
-    ../../themes/Catppuccin # Catppuccin GTK and QT themes
+    # ../../themes/Catppuccin # Catppuccin GTK and QT themes
     ./programs/waybar
     ./programs/wlogout
     ./programs/rofi
@@ -270,8 +270,8 @@
             "opacity 0.80 0.80,class:^(org.kde.dolphin)$"
             "opacity 0.80 0.80,class:^(org.kde.ark)$"
             "opacity 0.80 0.80,class:^(nwg-look)$"
-            "opacity 0.80 0.80,class:^(qt5ct)$"
-            "opacity 0.80 0.80,class:^(qt6ct)$"
+            # "opacity 0.80 0.80,class:^(qt5ct)$"
+            # "opacity 0.80 0.80,class:^(qt6ct)$"
             "opacity 0.80 0.80,class:^(yad)$"
 
             "opacity 0.90 0.90,class:^(com.github.rafostar.Clapper)$" #Clapper-Gtk

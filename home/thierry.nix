@@ -5,9 +5,7 @@
 
   home.packages = with pkgs; [
     neofetch          # system info
-    firefox		        # browser
     waybar		        # top bar
-    rofi-wayland      # ?
     kitty             # terminal
     wl-clipboard      # copy pasta 
     gcc               # c compiler
@@ -26,6 +24,7 @@
   };
 
   programs.home-manager.enable = true;
+
 
   # home.file.".config/waybar/config".source = ./../modules/waybar/waybar-config.json;
   # home.file.".config/waybar/style.css".source = ./../modules/waybar/waybar-style.css;

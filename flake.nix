@@ -29,7 +29,7 @@
       browser = "firefox";
       terminalFileManager = "yazi";
       terminal = "kitty";
-      kbdLayout = "gb";
+      kbdLayout = "us";
       kbdVariant = "extd";
       wallpaper = "Train.jpg"; # see modules/themes/wallpapers
     };
@@ -40,13 +40,12 @@
         modules = [
           ./hosts/nixos.nix
           ./hosts/hardware-configuration.nix
-          #./modules/nvim/nvim.nix
-          ./modules/desktop/hyprland
+          # ./modules/desktop/hyprland
           ./modules/media/discord
           ./modules/media/mpv
           ./modules/media/obs-studio
-          # ./modules/media/spicetify
-          # ./modules/programs/browser/firefox
+          ./modules/media/spicetify
+          ./modules/programs/browser/firefox
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
@@ -80,6 +79,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
             home-manager.users.thierry = import ./home/thierry.nix;
           }
         ];
