@@ -45,8 +45,8 @@
           ./modules/media/discord
           ./modules/media/mpv
           ./modules/media/obs-studio
-          ./modules/media/spicetify
-          ./modules/programs/browser/firefox
+          # ./modules/media/spicetify
+          # ./modules/programs/browser/firefox
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
@@ -55,8 +55,13 @@
           ./modules/programs/shell/zsh
           ./modules/programs/terminal/kitty
 
-          { nixpkgs.overlays = [ inputs.nur.overlay ]; }
-
+          {
+            nixpkgs.overlays = [ 
+              inputs.nur.overlay
+              # (final: prev: {qt6gtk2 = inputs.nixpkgs-stable.legacyPackages.${final.system}.qt6gtk2; })
+              # (final: prev: { qt6gtk2 = prev.qt6gtk2.overrideAttrs (old: { meta.broken = true; }); })
+            ]; 
+          }
 
           {
             _module.args = {
