@@ -23,6 +23,10 @@
     enable = true;
     addKeysToAgent = "yes";
   };
+  programs.keychain = {
+    enable = true;
+    keys = [ "nixos-config-github" ];
+  };
 
   programs.home-manager.enable = true;
 
