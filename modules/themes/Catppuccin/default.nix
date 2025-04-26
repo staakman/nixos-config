@@ -14,7 +14,7 @@ in {
 
       qt = {
         enable = true;
-        platformTheme.name = "gtk";
+        platformTheme.name = "qtct"; # gtk
         style.name = "kvantum";
       };
       gtk = {

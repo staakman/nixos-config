@@ -9,6 +9,7 @@
     kitty             # terminal
     wl-clipboard      # copy pasta 
     gcc               # c compiler
+    signal-desktop
     home-manager
   ];
 
@@ -24,6 +25,13 @@
   };
 
   programs.home-manager.enable = true;
+
+  xdg.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [xdg-desktop-portal-gtk];
+  };
 
 
   # home.file.".config/waybar/config".source = ./../modules/waybar/waybar-config.json;

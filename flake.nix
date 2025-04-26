@@ -30,7 +30,7 @@
       terminalFileManager = "yazi";
       terminal = "kitty";
       kbdLayout = "us";
-      kbdVariant = "extd";
+      kbdVariant = "";
       wallpaper = "Train.jpg"; # see modules/themes/wallpapers
     };
     
@@ -40,7 +40,7 @@
         modules = [
           ./hosts/nixos.nix
           ./hosts/hardware-configuration.nix
-          # ./modules/desktop/hyprland
+          ./modules/desktop/hyprland
           ./modules/media/discord
           ./modules/media/mpv
           ./modules/media/obs-studio
@@ -57,8 +57,6 @@
           {
             nixpkgs.overlays = [ 
               inputs.nur.overlay
-              # (final: prev: {qt6gtk2 = inputs.nixpkgs-stable.legacyPackages.${final.system}.qt6gtk2; })
-              # (final: prev: { qt6gtk2 = prev.qt6gtk2.overrideAttrs (old: { meta.broken = true; }); })
             ]; 
           }
 

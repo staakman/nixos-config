@@ -9,14 +9,14 @@
   ...
 }: {
   imports = [
-    # ../../themes/Catppuccin # Catppuccin GTK and QT themes
+    ../../themes/Catppuccin # Catppuccin GTK and QT themes
     ./programs/waybar
     ./programs/wlogout
     ./programs/rofi
     ./programs/hypridle
     ./programs/hyprlock
     ./programs/swaync
-    # ./programs/dunst
+    # # ./programs/dunst  # was already commented
   ];
 
   nix.settings = {
@@ -105,7 +105,7 @@
             "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
             "QT_QPA_PLATFORMTHEME,qt6ct"
             "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-            "WLR_RENDERER_ALLOW_SOFTWARE,1"
+            # "WLR_RENDERER_ALLOW_SOFTWARE,1"
             "NIXPKGS_ALLOW_UNFREE,1"
           ];
           exec-once = [
@@ -128,8 +128,8 @@
             "polkit-agent-helper-1"
           ];
           input = {
-            kb_layout = "${kbdLayout},ru";
-            kb_variant = "${kbdVariant},";
+            kb_layout = "${kbdLayout}";
+            kb_variant = "${kbdVariant}";
             repeat_delay = 300; # or 212
             repeat_rate = 30;
 
@@ -212,8 +212,8 @@
             ];
           };
           render = {
-            explicit_sync = 2; # 0 = off, 1 = on, 2 = auto based on gpu driver.
-            explicit_sync_kms = 2; # 0 = off, 1 = on, 2 = auto based on gpu driver.
+            explicit_sync = 0; # 0 = off, 1 = on, 2 = auto based on gpu driver.
+            explicit_sync_kms = 0; # 0 = off, 1 = on, 2 = auto based on gpu driver.
             direct_scanout = false; # Set to true for less Fullscreen game lag (may cause glitches).
           };
           misc = {
@@ -222,7 +222,7 @@
             swallow_regex = "^(Alacritty|kitty)$";
             enable_swallow = true;
             vfr = true; # always keep on
-            vrr = 1; # enable variable refresh rate (0=off, 1=on, 2=fullscreen only)
+            vrr = 0; # enable variable refresh rate (0=off, 1=on, 2=fullscreen only)
           };
           xwayland.force_zero_scaling = false;
           gestures = {
@@ -240,17 +240,17 @@
           };
           windowrulev2 = [
             #"noanim, class:^(Rofi)$
-            "tile,title:(.*)(Godot)(.*)$"
-            "workspace 1, class:^(kitty|Alacritty|org.wezfurlong.wezterm)$"
-            "workspace 2, class:^(code|VSCodium|code-url-handler|codium-url-handler)$"
-            "workspace 3, class:^(krita)$"
-            "workspace 3, title:(.*)(Godot)(.*)$"
-            "workspace 3, title:(GNU Image Manipulation Program)(.*)$"
-            "workspace 3, class:^(factorio)$"
-            "workspace 3, class:^(steam)$"
-            "workspace 5, class:^(firefox|floorp|zen)$"
-            "workspace 6, class:^(Spotify)$"
-            "workspace 6, title:(.*)(Spotify)(.*)$"
+            # "tile,title:(.*)(Godot)(.*)$"
+            # "workspace 1, class:^(kitty|Alacritty|org.wezfurlong.wezterm)$"
+            # "workspace 2, class:^(code|VSCodium|code-url-handler|codium-url-handler)$"
+            # "workspace 3, class:^(krita)$"
+            # "workspace 3, title:(.*)(Godot)(.*)$"
+            # "workspace 3, title:(GNU Image Manipulation Program)(.*)$"
+            # "workspace 3, class:^(factorio)$"
+            # "workspace 3, class:^(steam)$"
+            # "workspace 5, class:^(firefox|floorp|zen)$"
+            # "workspace 6, class:^(Spotify)$"
+            # "workspace 6, title:(.*)(Spotify)(.*)$"
 
             "opacity 0.80 0.80,class:^(alacritty)$"
             "opacity 0.80 0.80,class:^(org.wezfurlong.wezterm)$"
@@ -482,20 +482,16 @@
           monitor=,preferred,auto,1
 
           # 1080p-HDR monitor on the left, 4K-HDR monitor in the middle and 1080p vertical monitor on the right.
-          monitor=desc:BNQ BenQ EW277HDR 99J01861SL0,preferred,-1920x0,1,bitdepth,8
-          monitor=desc:BNQ BenQ EL2870U PCK00489SL0,3840x2160@60,0x0,2,bitdepth,10
-          monitor=desc:BNQ BenQ xl2420t 99D06760SL0,preferred,1920x0,1,transform,1 # 5 for fipped
-
-          workspace=1,monitor:desc:BNQ BenQ EL2870U PCK00489SL0,default:true
-          workspace=2,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
-          workspace=3,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
-          workspace=4,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
-          workspace=5,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0,default:true
-          workspace=6,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0
-          workspace=7,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0
-          workspace=8,monitor:desc:BNQ BenQ xl2420t 99D06760SL0,default:true
-          workspace=9,monitor:desc:BNQ BenQ xl2420t 99D06760SL0
-          workspace=10,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
+          # workspace=1,monitor:desc:BNQ BenQ EL2870U PCK00489SL0,default:true
+          # workspace=2,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
+          # workspace=3,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
+          # workspace=4,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
+          # workspace=5,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0,default:true
+          # workspace=6,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0
+          # workspace=7,monitor:desc:BNQ BenQ EW277HDR 99J01861SL0
+          # workspace=8,monitor:desc:BNQ BenQ xl2420t 99D06760SL0,default:true
+          # workspace=9,monitor:desc:BNQ BenQ xl2420t 99D06760SL0
+          # workspace=10,monitor:desc:BNQ BenQ EL2870U PCK00489SL0
         '';
       };
     })

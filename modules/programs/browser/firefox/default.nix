@@ -54,6 +54,13 @@ in {
               #   OfflineApps = true;
               #   Locked = true;
               # };
+              
+              ExtensionSettings = {
+                "protonpass@proton.me" = {
+                  installation_mode = "force_installed";
+                  install_url = "https://addons.mozilla.org/firefox/downloads/latest/proton-pass/latest.xpi";
+                };
+              };
 
               "3rdparty".Extensions = {
                 "addon@darkreader.org" = {
@@ -404,6 +411,7 @@ in {
                 ublock-origin
                 violentmonkey
                 darkreader
+                proton-pass
                 betterttv
                 sponsorblock
                 return-youtube-dislikes
@@ -419,21 +427,14 @@ in {
                       url = "https://www.youtube.com";
                     }
                     {
-                      name = "Twitch";
-                      url = "https://www.twitch.tv";
-                    }
-                    {
-                      name = "Netflix";
-                      url = "https://www.netflix.com";
-                    }
-                    {
                       name = "Github";
                       url = "https://github.com/";
                     }
                     {
-                      name = "Lloyds Bank";
-                      url = "https://www.lloydsbank.com/";
+                      name = "ChatGPT";
+                      url = "https://chat.openai.com/";
                     }
+
                     {
                       name = "NixOS";
                       bookmarks = [
