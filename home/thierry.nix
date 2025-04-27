@@ -29,15 +29,15 @@
     enable = true;
     addKeysToAgent = "yes";
   };
+
   programs.keychain = {
     enable = true;
-    keys = [ "nixos-config-github" ];
+    keys = [ "id_ed25519" ];
   };
 
   programs.home-manager.enable = true;
 
   xdg.enable = true;
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [xdg-desktop-portal-gtk];
