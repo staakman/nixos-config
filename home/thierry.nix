@@ -11,6 +11,12 @@
     gcc               # c compiler
     signal-desktop
     home-manager
+
+    (godot.overrideAttrs (oldAttrs: {
+      dontStrip = false;
+      dontInstallDebugSymbols = true;
+      separateDebugInfo = false;
+    }))
   ];
 
   programs.git = {

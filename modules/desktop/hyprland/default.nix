@@ -240,11 +240,11 @@
           };
           windowrulev2 = [
             #"noanim, class:^(Rofi)$
-            # "tile,title:(.*)(Godot)(.*)$"
+            "tile,title:(.*)(Godot)(.*)$"
             # "workspace 1, class:^(kitty|Alacritty|org.wezfurlong.wezterm)$"
             # "workspace 2, class:^(code|VSCodium|code-url-handler|codium-url-handler)$"
+            "workspace 2, title:(.*)(Godot)(.*)$"
             # "workspace 3, class:^(krita)$"
-            # "workspace 3, title:(.*)(Godot)(.*)$"
             # "workspace 3, title:(GNU Image Manipulation Program)(.*)$"
             # "workspace 3, class:^(factorio)$"
             # "workspace 3, class:^(steam)$"
