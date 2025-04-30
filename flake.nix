@@ -38,7 +38,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = system;
         modules = [
-          ./hosts/nixos.nix
+          ./hosts/configuration.nix
           ./hosts/hardware-configuration.nix
           ./modules/desktop/hyprland
           ./modules/media/discord
@@ -51,8 +51,9 @@
           ./modules/programs/cli/yazi
           ./modules/programs/editor/nvim
           ./modules/programs/shell/bash
-          ./modules/programs/shell/zsh
+          ./modules/programs/shell/bash/
           ./modules/programs/terminal/kitty
+          ./modules/programs/virtualization/docker/docker.nix
 
           {
             nixpkgs.overlays = [ 

@@ -13,10 +13,10 @@
     ./programs/waybar
     ./programs/wlogout
     ./programs/rofi
-    ./programs/hypridle
-    ./programs/hyprlock
+    #./programs/hypridle
+    #./programs/hyprlock
     ./programs/swaync
-    # # ./programs/dunst  # was already commented
+    ./programs/dunst  
   ];
 
   nix.settings = {
@@ -244,11 +244,12 @@
             # "workspace 1, class:^(kitty|Alacritty|org.wezfurlong.wezterm)$"
             # "workspace 2, class:^(code|VSCodium|code-url-handler|codium-url-handler)$"
             "workspace 2, title:(.*)(Godot)(.*)$"
+            #"workspace 3, title:(.*)(Kingdom Tactics)(.*)$"
+            "workspace 5, class:^(firefox|floorp|zen)$"
             # "workspace 3, class:^(krita)$"
             # "workspace 3, title:(GNU Image Manipulation Program)(.*)$"
             # "workspace 3, class:^(factorio)$"
-            # "workspace 3, class:^(steam)$"
-            # "workspace 5, class:^(firefox|floorp|zen)$"
+            # "workspace 3, class:^(steam)$" 
             # "workspace 6, class:^(Spotify)$"
             # "workspace 6, title:(.*)(Spotify)(.*)$"
 
@@ -270,8 +271,8 @@
             "opacity 0.80 0.80,class:^(org.kde.dolphin)$"
             "opacity 0.80 0.80,class:^(org.kde.ark)$"
             "opacity 0.80 0.80,class:^(nwg-look)$"
-            # "opacity 0.80 0.80,class:^(qt5ct)$"
-            # "opacity 0.80 0.80,class:^(qt6ct)$"
+            "opacity 0.80 0.80,class:^(qt5ct)$"
+            "opacity 0.80 0.80,class:^(qt6ct)$"
             "opacity 0.80 0.80,class:^(yad)$"
 
             "opacity 0.90 0.90,class:^(com.github.rafostar.Clapper)$" #Clapper-Gtk

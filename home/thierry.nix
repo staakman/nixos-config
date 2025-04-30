@@ -4,13 +4,16 @@
   home.homeDirectory = "/home/thierry";
 
   home.packages = with pkgs; [
-    neofetch          # system info
-    waybar		        # top bar
-    kitty             # terminal
-    wl-clipboard      # copy pasta 
-    gcc               # c compiler
-    signal-desktop
-    home-manager
+    neofetch            # system info
+    waybar		          # top bar
+    gcc                 # c compiler
+    signal-desktop      # signal app
+    home-manager        # manage home folder
+    jq                  # json
+    fd                  # finder for nvim
+    vlc                 # video player
+    
+    nakama              # nakama game server 
 
     (godot.overrideAttrs (oldAttrs: {
       dontStrip = false;
