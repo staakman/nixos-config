@@ -13,7 +13,9 @@
     fd                  # finder for nvim
     vlc                 # video player
     
-    nakama              # nakama game server 
+    nakama              # nakama game server
+    docker              # docker engine
+    docker-compose      # multi-docker engine
 
     (godot.overrideAttrs (oldAttrs: {
       dontStrip = false;

@@ -142,12 +142,7 @@
     networkmanagerapplet    # NETWORK MANAGER
     font-awesome            # famous font packages
     ntfs3g                  # ntfs file disk
-
-    docker                  # docker environment
-    docker-compose          # multi docker engine
   ];
-
-  services.docker.enable = true;
 
   fonts.packages = with pkgs; [
     noto-fonts

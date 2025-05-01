@@ -51,7 +51,6 @@
           ./modules/programs/cli/yazi
           ./modules/programs/editor/nvim
           ./modules/programs/shell/bash
-          ./modules/programs/shell/bash/
           ./modules/programs/terminal/kitty
           ./modules/programs/virtualization/docker/docker.nix
 
