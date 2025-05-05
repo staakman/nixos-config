@@ -14,7 +14,7 @@
     ./programs/wlogout
     ./programs/rofi
     #./programs/hypridle
-    #./programs/hyprlock
+    ./programs/hyprlock
     ./programs/swaync
     ./programs/dunst  
   ];
@@ -212,9 +212,9 @@
             ];
           };
           render = {
-            explicit_sync = 0; # 0 = off, 1 = on, 2 = auto based on gpu driver.
-            explicit_sync_kms = 0; # 0 = off, 1 = on, 2 = auto based on gpu driver.
-            direct_scanout = false; # Set to true for less Fullscreen game lag (may cause glitches).
+            explicit_sync = 2; # 0 = off, 1 = on, 2 = auto based on gpu driver.
+            explicit_sync_kms = 2; # 0 = off, 1 = on, 2 = auto based on gpu driver.
+            direct_scanout = true; # Set to true for less Fullscreen game lag (may cause glitches).
           };
           misc = {
             disable_hyprland_logo = true;
@@ -240,12 +240,10 @@
           };
           windowrulev2 = [
             #"noanim, class:^(Rofi)$
-            "tile,title:(.*)(Godot)(.*)$"
+            #"tile,title:(.*)(Godot)(.*)$"
             # "workspace 1, class:^(kitty|Alacritty|org.wezfurlong.wezterm)$"
             # "workspace 2, class:^(code|VSCodium|code-url-handler|codium-url-handler)$"
-            "workspace 2, title:(.*)(Godot)(.*)$"
-            "workspace 3, class:(.*)(Kingdom Tactics)(.*)$"
-            "workspace 3, title:(.*)(Kingdom Tactics)(.*)$"
+            #"workspace 2, title:(.*)(Godot)(.*)$"
             "workspace 5, class:^(firefox|floorp|zen)$"
             # "workspace 3, class:^(krita)$"
             # "workspace 3, title:(GNU Image Manipulation Program)(.*)$"
@@ -296,6 +294,7 @@
             "opacity 0.80 0.70,class:^(nm-connection-editor)$"
             "opacity 0.80 0.70,class:^(org.kde.polkit-kde-authentication-agent-1)$"
 
+            "float, title:^(Kingdom Tactics)(.*)$"
             "float,class:^(qt5ct)$"
             "float,class:^(nwg-look)$"
             "float,class:^(org.kde.ark)$"
