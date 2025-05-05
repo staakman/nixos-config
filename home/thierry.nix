@@ -63,6 +63,7 @@
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
   };
   
+  /*
   # lazyVim
   home.file.".config/nvim".source = ./../modules/programs/editor/nvim;
   programs.neovim = {
@@ -75,6 +76,7 @@
     plugins = [ ];      # leave empty!
     extraConfig = ''''; # leave empty or add basic config
   };
+  */
 
   home.stateVersion = "24.11";
 }

@@ -49,7 +49,7 @@
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
-          # ./modules/programs/editor/nvim
+          ./modules/programs/editor/nvim
           ./modules/programs/shell/bash
           ./modules/programs/terminal/kitty
           ./modules/programs/virtualization/docker/docker.nix
