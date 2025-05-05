@@ -50,7 +50,6 @@
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
-          # ./modules/programs/editor/nvim # < right here I include default.nix which I shared with you
           ./modules/programs/shell/bash
           ./modules/programs/terminal/kitty
           ./modules/programs/virtualization/docker/docker.nix
