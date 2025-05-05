@@ -19,6 +19,7 @@
       url = "github:yokoffing/Betterfox";
       flake = false;
     };
+
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
@@ -49,7 +50,7 @@
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
-          ./modules/programs/editor/nvim
+          # ./modules/programs/editor/nvim # < right here I include default.nix which I shared with you
           ./modules/programs/shell/bash
           ./modules/programs/terminal/kitty
           ./modules/programs/virtualization/docker/docker.nix
@@ -78,10 +79,8 @@
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             #home-manager.users.thierry = import ./home/thierry.nix;
-            home-manager.users.thierry = { config, pkgs, ... }: {
-              _module.args = {
-                inputs = inputs;
-              };
+            home-manager.users.thierry = { config, lib, pkgs, ... }: {
+              # _module.args = { };
 
               imports = [
                 ./home/thierry.nix
