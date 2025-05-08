@@ -1,3 +1,5 @@
+print("Loading lua-ls.lua")
+
 return {
 	"neovim/nvim-lspconfig",
 	opts = {
