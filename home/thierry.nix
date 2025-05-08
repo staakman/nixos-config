@@ -23,10 +23,13 @@
 
     openssl               # cryptographic library
 
-    unzip                 # unzip files, used by nvim
-    ffmpeg                # video lib, used by nvim
-    imagemagick           # image lib, used by nvim
+    unzip                 # nvim - unzip files
+    ffmpeg                # nvim - play videos
+    imagemagick           # nvim - display images
+    
     lua-language-server   # lua, used by nvim to be able to read lua config files (needed for gdscript)
+
+    openfortivpn          # work - vpn
 
     # inputs.nixvim.packages.${pkgs.system}.default
 
@@ -53,6 +56,11 @@
     enable = true;
     keys = [ "id_ed25519" ];
   };
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+  
+  users.users.thierry.extraGroups = [ "libvirtd" "kvm" ];
 
   programs.home-manager.enable = true;
 

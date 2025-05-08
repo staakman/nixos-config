@@ -52,7 +52,8 @@
           ./modules/programs/cli/yazi
           ./modules/programs/shell/bash
           ./modules/programs/terminal/kitty
-          ./modules/programs/virtualization/docker/docker.nix
+          ./modules/programs/virtualization/docker
+          ./modules/programs/virtualization/virt-manager
 
           {
             nixpkgs.overlays = [ 

@@ -4,7 +4,7 @@ let
   plugins = with pkgs.vimPlugins; [
     LazyVim
     bufferline-nvim
-    cmp-buffer
+    # cmp-buffer
     cmp-nvim-lsp
     cmp-path
     cmp_luasnip
@@ -21,7 +21,7 @@ let
     neodev-nvim
     noice-nvim
     nui-nvim
-    nvim-cmp
+    # nvim-cmp
     nvim-lint
     nvim-lspconfig
     nvim-notify
