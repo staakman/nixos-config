@@ -30,6 +30,9 @@
     lua-language-server   # lua, used by nvim to be able to read lua config files (needed for gdscript)
 
     openfortivpn          # work - vpn
+    terraform             # work - terraform
+    qemu                  # work - virtualization
+    kubectl               # work - kubectl
 
     # inputs.nixvim.packages.${pkgs.system}.default
 
@@ -56,11 +59,6 @@
     enable = true;
     keys = [ "id_ed25519" ];
   };
-
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-  
-  users.users.thierry.extraGroups = [ "libvirtd" "kvm" ];
 
   programs.home-manager.enable = true;
 

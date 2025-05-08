@@ -110,10 +110,9 @@
   users.users.thierry = {
     isNormalUser = true;
     description = "thierry staakman";
-    extraGroups = [ "networkmanager" "wheel" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "video" "docker" "libvirtd" "kvm" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
     ];
   };
 

@@ -5,5 +5,5 @@
   virtualisation.docker.enable = true;
 
   # (Optional) Allow the default user to access the Docker daemon
-  users.users.thierry.extraGroups = [ "docker" ];
+  # users.users.thierry.extraGroups = [ "docker" ];
 }
