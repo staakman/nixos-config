@@ -7,8 +7,9 @@ return {
 					Lua = {
 						workspace = {
 							library = {
-								vim.fn.expand("~/.config/nvim/lua/stubs/"), -- path to your stub
+								vim.fn.expand("~/.config/nvim/lua/stubs/"),
 							},
+							checkThirdParty = false,
 						},
 					},
 				},
