@@ -74,6 +74,8 @@ in {
       lua-language-server
       stylua
       ripgrep
+      nil
+      nixpkgs-fmt
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -96,6 +98,7 @@ in {
           { "williamboman/mason-lspconfig.nvim", enabled = false },
           { "williamboman/mason.nvim", enabled = false },
           { import = "plugins" },
+          { import = "plugins.lsp-nix" },
           { "nvim-treesitter/nvim-treesitter", opts = function(_, opts) opts.ensure_installed = {} end },
         },
       })

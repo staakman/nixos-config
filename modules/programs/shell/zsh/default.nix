@@ -177,17 +177,17 @@
         };
         shellAliases = {
           cls = "clear";
-          tml = "tmux list-sessions";
-          attach = "tmux attach";
-          att = "tmux attach";
-          l = "${pkgs.eza}/bin/eza -lh  --icons=auto"; # long list
-          ls = "${pkgs.eza}/bin/eza -1   --icons=auto"; # short list
-          ll = "${pkgs.eza}/bin/eza -lha --icons=auto --sort=name --group-directories-first"; # long list all
-          ld = "${pkgs.eza}/bin/eza -lhD --icons=auto"; # long list dirs
+          # tml = "tmux list-sessions";
+          # attach = "tmux attach";
+          # att = "tmux attach";
+          # l = "${pkgs.eza}/bin/eza -lh  --icons=auto"; # long list
+          # ls = "${pkgs.eza}/bin/eza -1   --icons=auto"; # short list
+          # ll = "${pkgs.eza}/bin/eza -lha --icons=auto --sort=name --group-directories-first"; # long list all
+          # ld = "${pkgs.eza}/bin/eza -lhD --icons=auto"; # long list dirs
           tree = "${pkgs.eza}/bin/eza --icons=auto --tree"; # dir tree
-          vc = "code --disable-gpu"; # gui code editor
-          nv = "nvim";
-          nf = "${pkgs.microfetch}/bin/microfetch";
+          # vc = "code --disable-gpu"; # gui code editor
+          # nv = "nvim";
+          # nf = "${pkgs.microfetch}/bin/microfetch";
           cp = "cp -iv";
           mv = "mv -iv";
           rm = "rm -vI";
@@ -196,23 +196,22 @@
           tp = "${pkgs.trash-cli}/bin/trash-put";
           tpr = "${pkgs.trash-cli}/bin/trash-restore";
           grep = "grep --color=always";
-          pokemon = "pokego --random 1-8 --no-title";
+          # pokemon = "pokego --random 1-8 --no-title";
 
           # Nixos
           list-gens = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system/";
           find-store-path = ''function { nix-shell -p $1 --command "nix eval -f \"<nixpkgs>\" --raw $1" }'';
           update-input = "nix flake update $@";
           rebuild = "${../../../desktop/hyprland/scripts/rebuild.sh}";
-          sysup = "sudo nixos-rebuild switch --flake ~/NixOS#Default --upgrade-all --show-trace";
+          # sysup = "sudo nixos-rebuild switch --flake ~/NixOS#Default --upgrade-all --show-trace";
 
           # Directory Shortcuts.
-          dots = "cd ~/NixOS/";
-          games = "cd /mnt/games/";
-          work = "cd /mnt/work/";
-          media = "cd /mnt/work/media/";
-          projects = "cd /mnt/work/Projects/";
-          proj = "cd /mnt/work/Projects/";
-          dev = "cd /mnt/work/Projects/";
+          dots = "cd ~/nix-config/";
+          # games = "cd /mnt/games/";
+          # work = "cd ~/Work/";
+          media = "cd /mnt/ntfsdrive/Media Files/";
+          projects = "cd ~/Projects/";
+          # dev = "cd /mnt/work/Projects/";
           # dev = "cd /mnt/work/dev/";
           # nixdir = "cd /mnt/work/dev/nix/";
           # cppdir = "cd /mnt/work/dev/C++/";

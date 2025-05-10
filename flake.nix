@@ -22,9 +22,11 @@
 
   };
 
+
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
     
     system = "x86_64-linux";
+    pkgs = import nixpkgs { inherit system; };
     
     settings = {
       browser = "firefox";
@@ -36,21 +38,29 @@
     };
 
     in {
+      devShells.${system}.default = pkgs.mkShell {
+        buildInputs = [ pkgs.nil pkgs.nixpkgs-fmt ];
+      };
+
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = system;
         modules = [
           ./hosts/configuration.nix
           ./hosts/hardware-configuration.nix
           ./modules/desktop/hyprland
+          ./modules/drivers/webcam
           ./modules/media/discord
           ./modules/media/mpv
           ./modules/media/obs-studio
           ./modules/media/spicetify
           ./modules/programs/browser/firefox
+          ./modules/programs/cli/direnv
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
+          ./modules/programs/editor/my-vim
           ./modules/programs/shell/bash
+          ./modules/programs/shell/zsh
           ./modules/programs/terminal/kitty
           ./modules/programs/virtualization/docker
           ./modules/programs/virtualization/virt-manager

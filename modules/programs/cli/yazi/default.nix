@@ -6,6 +6,7 @@
         enableBashIntegration = true;
         enableZshIntegration = true;
         settings = {
+          
           manager = {
             show_hidden = true;
             show_symlink = true;
@@ -27,7 +28,7 @@
             # max_width = 1500;
             # max_height = 1500;
             image_quality = 90;
-          };
+          };          
         };
         keymap = {
           manager.prepend_keymap = [

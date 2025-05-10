@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: {
 
   imports = [
-    ./nvim/nvim.nix
+    # ./nvim/nvim.nix
   ];
 
   home.username = "thierry";
@@ -28,11 +28,15 @@
     imagemagick           # nvim - display images
     
     lua-language-server   # lua, used by nvim to be able to read lua config files (needed for gdscript)
+    pkgs.nixd             # nix language server
+    pkgs.nixpkgs-fmt      # nix language server format
 
     openfortivpn          # work - vpn
     terraform             # work - terraform
     qemu                  # work - virtualization
     kubectl               # work - kubectl
+    teams-for-linux       # work - teams
+
 
     # inputs.nixvim.packages.${pkgs.system}.default
 
@@ -71,6 +75,13 @@
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "video/mp4" = "vlc.desktop";
+    };
   };
 
   home.stateVersion = "24.11";
