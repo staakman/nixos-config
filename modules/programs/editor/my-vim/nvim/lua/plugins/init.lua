@@ -1,0 +1,5 @@
+require("plugins.catppuccin")
+require("plugins.lualine")
+require("plugins.treesitter")
+require("plugins.nvim-tree-lua")
+require("plugins.telescope-nvim")

@@ -23,13 +23,7 @@
 
     openssl               # cryptographic library
 
-    unzip                 # nvim - unzip files
-    ffmpeg                # nvim - play videos
-    imagemagick           # nvim - display images
-    
     lua-language-server   # lua, used by nvim to be able to read lua config files (needed for gdscript)
-    pkgs.nixd             # nix language server
-    pkgs.nixpkgs-fmt      # nix language server format
 
     openfortivpn          # work - vpn
     terraform             # work - terraform
