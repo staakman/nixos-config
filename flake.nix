@@ -58,10 +58,11 @@
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
+          #./modules/programs/cli/teleport
           ./modules/programs/editor/my-vim
           ./modules/programs/shell/bash
           ./modules/programs/shell/zsh
-          ./modules/programs/terminal/kitty
+          ./modules/programs/terminal/kitty 
           ./modules/programs/virtualization/docker
           ./modules/programs/virtualization/virt-manager
 

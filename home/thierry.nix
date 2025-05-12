@@ -2,6 +2,7 @@
 
   imports = [
     # ./nvim/nvim.nix
+    ./modules/teleport.nix
   ];
 
   home.username = "thierry";
@@ -30,6 +31,7 @@
     qemu                  # work - virtualization
     kubectl               # work - kubectl
     teams-for-linux       # work - teams
+    k9s                   # work - kubernetes utility
 
 
     # inputs.nixvim.packages.${pkgs.system}.default
@@ -58,6 +60,7 @@
     keys = [ "id_ed25519" ];
   };
 
+  programs.teleport.enable = true;
   programs.home-manager.enable = true;
 
   # used by Godot for project encryption
