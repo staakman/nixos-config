@@ -60,7 +60,8 @@
     open = false;
   };
 
-
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Enable the KDE Plasma Desktop Environment.
   # services.displayManager.sddm.enable = true;
@@ -84,7 +85,7 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  services.blueman.enable = true;
   services.pulseaudio.enable = false;
 
 

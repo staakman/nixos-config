@@ -95,7 +95,7 @@
             home-manager.users.thierry = { config, lib, pkgs, ... }: {
               # _module.args = { };
               imports = [
-                inputs.catppuccin.homeManagerModules.catppuccin
+                inputs.catppuccin.homeModules.catppuccin
                 ./home/thierry.nix
               ];
             };

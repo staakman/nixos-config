@@ -14,7 +14,7 @@
     gcc                   # c compiler
     signal-desktop        # signal app
     home-manager          # manage home folder
-    fzf
+    fzf                   # fuzzy file search
     jq                    # json
     fd                    # finder for nvim
     vlc                   # video player
@@ -36,9 +36,6 @@
     k9s                   # work - kubernetes utility
     kubernetes-helm       # work - helm
     kubectx               # work - switch kubernetes contexts
-
-
-    # inputs.nixvim.packages.${pkgs.system}.default
 
     (godot.overrideAttrs (oldAttrs: {
       dontStrip = false;
