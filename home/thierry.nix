@@ -27,6 +27,7 @@
     openssl               # cryptographic library
 
     lua-language-server   # lua, used by nvim to be able to read lua config files (needed for gdscript)
+    nixd                  # nix, language server used by nvim
 
     openfortivpn          # work - vpn
     terraform             # work - terraform

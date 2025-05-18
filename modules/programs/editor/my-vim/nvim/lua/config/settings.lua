@@ -24,3 +24,11 @@ vim.o.relativenumber = false
 
 -- Disable deprecate messages
 vim.deprecate = function() end
+
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.WARN] = '',
+    },
+  },
+})

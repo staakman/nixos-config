@@ -30,7 +30,8 @@ wk.add({
   -- lazyGit
   { "<leader>lg", function() require("lazygit").lazygit() end, desc="open git", mode="n" },
 
-  -- TODO
+  --TODO: add todo telescope option
+
   { "<leader>n", ":NvimTreeToggle<cr>", desc="open explorer (cwd)", mode="n" }, -- TODO
   { "<leader>n", ":NvimTreeToggle<cr>", desc="open explorer (cwd)", mode="n" }, -- TODO
 })
