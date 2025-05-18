@@ -6,6 +6,23 @@ let
     
     # buffer-line                     # Adds a tab-like buffer line at the top of the window with support for icons and LSP diagnostics
 
+    # git
+    lazygit-nvim
+
+    # other
+    vim-illuminate                    # Highlight same words
+
+    plenary-nvim                      # dependency for todo-comments-nvim
+    todo-comments-nvim                # Highlights and lists TODO, FIX, HACK
+
+    # INFO
+
+    # input line
+    noice-nvim
+
+    # error handling
+    nvim-notify
+
     # autocompletion
     nvim-cmp                          # Autocompletion engine for Neovim
     cmp-nvim-lsp                      # Adds LSP (Language Server Protocol) support to nvim-cmp, enabling intelligent code suggestions
@@ -23,11 +40,12 @@ let
     nvim-web-devicons                 # adds really cool icons to nvim-tree
     nvim-tree-lua                     # file browser (left)
     
-    # lualine
+    # status line
     lualine-nvim                      # powerline, visual input field at bottom in nvim
     
     # colorscheme
-    catppuccin-nvim                   # colorscheme
+    catppuccin-nvim
+    tokyonight-nvim                   
     
     # file (search) browser
     telescope-nvim                    # search engine
@@ -47,6 +65,9 @@ let
       p.vim
       p.c
       p.vimdoc
+      p.bash
+      p.regex
+      p.nix
     ]))
 
   ];
@@ -67,6 +88,7 @@ in
         plugins = my-nix-plugins; # ++ [ my-vim-plugins ];
         extraPackages = with pkgs; [
           ripgrep
+          lazygit
         ];
       };
 

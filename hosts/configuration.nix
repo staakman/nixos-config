@@ -141,6 +141,7 @@
     networkmanagerapplet    # NETWORK MANAGER
     font-awesome            # famous font packages
     ntfs3g                  # ntfs file disk
+    bibata-cursors          # mouse cursor
   ];
 
   fonts.packages = with pkgs; [
@@ -157,6 +158,8 @@
     NIXOS_OZONE_WL = "1";
     EDITOR = "nvim";
     VISUAL = "nvim";
+    XCURSOR_THEME = "Bibata-Modern-Ice";  # or Bibata-Modern-Amber, etc.
+    XCURSOR_SIZE = "24";                  # optional, adjust size if needed
   };
 
 

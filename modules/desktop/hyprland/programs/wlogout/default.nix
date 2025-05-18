@@ -43,6 +43,7 @@
             keybind = "r";
           }
         ];
+
         style = ''
           window {
             font-family: monospace;
@@ -104,6 +105,7 @@
             background-image: image(url("icons/restart-hover.png"));
           }
         '';
+
       };
     })
   ];

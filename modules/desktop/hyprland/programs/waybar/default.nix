@@ -24,7 +24,7 @@
             modules-left = ["hyprland/workspaces"];
             # modules-center = ["clock" "custom/notification"];
             modules-center = ["idle_inhibitor" "clock"];
-            modules-right = ["custom/gpuinfo" "cpu" "memory" "pulseaudio" "backlight" "network" "bluetooth" "tray" "battery"];
+            modules-right = ["custom/gpuinfo" "cpu" "memory" "pulseaudio" "backlight" "network" "bluetooth"];
 
             "custom/notification" = {
               tooltip = false;
@@ -279,7 +279,11 @@
             padding: 0px;
           }
 
-          @define-color base   #1e1e2e;
+          /*@define-color base   #1e1e2e;*/
+          
+          @define-color base   rgba(30, 30, 46, 0.8);
+          @define-color theme_base_color rgba(30, 30, 46, 0.8);
+          
           @define-color mantle #181825;
           @define-color crust  #11111b;
 
@@ -452,7 +456,7 @@
           }
 
           #clock {
-            color: @yellow;
+            color: @lavender;
           }
 
           #custom-icon {
@@ -497,7 +501,8 @@
           }
 
           #workspaces button {
-              box-shadow: none;
+            color: @lavender;
+            box-shadow: none;
           	text-shadow: none;
               padding: 0px;
               border-radius: 9px;
@@ -518,7 +523,8 @@
           }
 
           #workspaces button.persistent {
-          	color: @surface1;
+          	/*color: @surface1;*/
+          	color: @lavender;
           	border-radius: 10px;
           }
 

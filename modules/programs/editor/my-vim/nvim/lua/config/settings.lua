@@ -1,3 +1,8 @@
+-- colorscheme
+vim.opt.termguicolors = true
+vim.cmd[[colorscheme tokyonight-night]]
+
+-- options
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
@@ -10,11 +15,12 @@ vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
 
-vim.o.signcolumn = "no"
+vim.o.signcolumn = "yes"
 vim.o.numberwidth = 4
 
--- Optional: always show line numbers and relative numbers
+-- Optional: always show line numbers
 vim.o.number = true
 vim.o.relativenumber = false
 
--- Optional: fix width of number column
+-- Disable deprecate messages
+vim.deprecate = function() end

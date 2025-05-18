@@ -25,7 +25,7 @@
           git_branch = {
             format = "[$branch]($style)";
             symbol = "git ";
-            style = "bright-black";
+            style = "bold #fab387";
           };
           git_status = {
             format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";

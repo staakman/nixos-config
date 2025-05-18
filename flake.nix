@@ -20,6 +20,8 @@
       flake = false;
     };
 
+    catppuccin.url = "github:catppuccin/nix";
+
   };
 
 
@@ -34,7 +36,7 @@
       terminal = "kitty";
       kbdLayout = "us";
       kbdVariant = "";
-      wallpaper = "Train.jpg"; # see modules/themes/wallpapers
+      wallpaper = "abstract/wallpaper_4.jpg"; # see modules/themes/wallpapers
     };
 
     in {
@@ -47,6 +49,7 @@
         modules = [
           ./hosts/configuration.nix
           ./hosts/hardware-configuration.nix
+          ./modules/themes/catppuccin
           ./modules/desktop/hyprland
           ./modules/drivers/webcam
           ./modules/media/discord
@@ -58,14 +61,13 @@
           ./modules/programs/cli/lazygit
           ./modules/programs/cli/starship
           ./modules/programs/cli/yazi
-          #./modules/programs/cli/teleport
           ./modules/programs/editor/my-vim
           ./modules/programs/shell/bash
           ./modules/programs/shell/zsh
           ./modules/programs/terminal/kitty 
           ./modules/programs/virtualization/docker
           ./modules/programs/virtualization/virt-manager
-
+          
           {
             nixpkgs.overlays = [ 
               inputs.nur.overlay
@@ -92,8 +94,8 @@
             #home-manager.users.thierry = import ./home/thierry.nix;
             home-manager.users.thierry = { config, lib, pkgs, ... }: {
               # _module.args = { };
-
               imports = [
+                inputs.catppuccin.homeManagerModules.catppuccin
                 ./home/thierry.nix
               ];
             };

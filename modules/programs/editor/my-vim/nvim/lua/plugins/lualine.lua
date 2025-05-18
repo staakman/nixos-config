@@ -1,14 +1,11 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    -- theme = 'nightfly',
+    theme = 'nightfly', -- palenight
   },
   sections = {
-    lualine_a = {
-      {
-        'filename',
-        path = 1,
-      }
-    }
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch' },
+    lualine_c = { 'filename' },
   }
 }

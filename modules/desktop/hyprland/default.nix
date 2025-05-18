@@ -9,7 +9,7 @@
   ...
 }: {
   imports = [
-    ../../themes/Catppuccin # Catppuccin GTK and QT themes
+    #../../themes/Catppuccin # Catppuccin GTK and QT themes
     ./programs/waybar
     ./programs/wlogout
     ./programs/rofi
@@ -107,6 +107,10 @@
             "QT_AUTO_SCREEN_SCALE_FACTOR,1"
             # "WLR_RENDERER_ALLOW_SOFTWARE,1"
             "NIXPKGS_ALLOW_UNFREE,1"
+            
+            # mouse cursor
+            "XCURSOR_THEME,Bibata-Modern-Ice"
+            "XCURSOR_SIZE,24"
           ];
           exec-once = [
             #"[workspace 1 silent] ${terminal}"
@@ -154,7 +158,7 @@
           };
           decoration = {
             shadow.enabled = false;
-            rounding = 10;
+            rounding = 5;
             dim_special = 0.3;
             blur = {
               enabled = true;

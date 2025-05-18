@@ -14,9 +14,11 @@
     gcc                   # c compiler
     signal-desktop        # signal app
     home-manager          # manage home folder
+    fzf
     jq                    # json
     fd                    # finder for nvim
     vlc                   # video player
+    krita                 # image editor
 
     nakama                # nakama game server
     docker                # docker engine
@@ -32,6 +34,8 @@
     kubectl               # work - kubectl
     teams-for-linux       # work - teams
     k9s                   # work - kubernetes utility
+    kubernetes-helm       # work - helm
+    kubectx               # work - switch kubernetes contexts
 
 
     # inputs.nixvim.packages.${pkgs.system}.default
@@ -62,6 +66,13 @@
 
   programs.teleport.enable = true;
   programs.home-manager.enable = true;
+
+  catppuccin.enable = true;
+  catppuccin.flavor = "mocha";
+
+  # Enable modules you use — here’s an example for `kitty` and `zsh`
+  catppuccin.kitty.enable = true;
+  # catppuccin.zsh.enable = true;
 
   # used by Godot for project encryption
   home.sessionVariables = {
