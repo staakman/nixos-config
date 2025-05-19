@@ -29,11 +29,20 @@ require("lspconfig").nixd.setup({
 })
 
 -- gdscript
-require("lspconfig").gdscript.setup({})
-require("lspconfig").gdshader_lsp.setup({})
+require("lspconfig").gdscript.setup({
+  capabilities = capabilities,
+})
+
+require("lspconfig").gdshader_lsp.setup({
+  capabilities = capabilities,
+})
 
 -- vim
-require("lspconfig").vimls.setup({})
+require("lspconfig").vimls.setup({
+  capabilities = capabilities,
+})
 
 -- bash
-require("lspconfig").bashls.setup({})
+require("lspconfig").bashls.setup({
+  capabilities = capabilities,
+})

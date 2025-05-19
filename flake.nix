@@ -91,7 +91,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            #home-manager.users.thierry = import ./home/thierry.nix;
             home-manager.users.thierry = { config, lib, pkgs, ... }: {
               # _module.args = { };
               imports = [

@@ -6,6 +6,10 @@ let
     
     # buffer-line                     # Adds a tab-like buffer line at the top of the window with support for icons and LSP diagnostics
 
+    # dashboard
+    # dashboard-nvim                    # adds a nice looking dashboard when you open nvim
+    alpha-nvim
+
     # git
     lazygit-nvim
 
@@ -50,6 +54,7 @@ let
     # file (search) browser
     telescope-nvim                    # search engine
     telescope-fzf-native-nvim         # sorter for telescope, recommended
+    telescope-ui-select-nvim          # sets vim.ui.select to telescope
 
     # hotkey window helper
     which-key-nvim

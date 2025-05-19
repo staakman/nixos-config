@@ -3,11 +3,17 @@ local luasnip = require("luasnip")
 
 require("luasnip.loaders.from_vscode").lazy_load() -- optional, for friendly-snippets
 
+-- capabilities are added in lsp-config.lua
+
 cmp.setup({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = cmp.mapping.complete(),
@@ -30,8 +36,3 @@ cmp.setup({
     { name = 'path' },
   })
 })
-
--- local capabilities = require("cmp_nvim_lsp").default_capabilities()
--- require("lspconfig").lua_ls.setup({
---  capabilities = capabilities,
--- })

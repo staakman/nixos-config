@@ -32,3 +32,10 @@ vim.diagnostic.config({
     },
   },
 })
+
+-- used in dashboard
+-- Save up to 20 files ('20)
+-- Save file marks for files less than 50KB (<50)
+-- Store 10 search history items (s10)
+-- Store help files (h) 
+vim.opt.shada = [['20,<50,s10,h]]
