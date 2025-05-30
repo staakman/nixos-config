@@ -1,6 +1,7 @@
 -- colorscheme
 vim.opt.termguicolors = true
 vim.cmd[[colorscheme tokyonight-night]]
+font = "JetBrains Mono"
 
 -- options
 vim.opt.backspace = '2'
@@ -17,6 +18,7 @@ vim.opt.expandtab = true
 
 vim.o.signcolumn = "yes"
 vim.o.numberwidth = 4
+vim.o.guifont = "JetBrainsMono Nerd Font:h12"
 
 -- Optional: always show line numbers
 vim.o.number = true

@@ -37,6 +37,8 @@
     k9s                   # work - kubernetes utility
     kubernetes-helm       # work - helm
     kubectx               # work - switch kubernetes contexts
+    ungoogled-chromium    # work - for slack
+    talosctl              # work - talosctl
 
     (godot.overrideAttrs (oldAttrs: {
       dontStrip = false;
@@ -64,13 +66,6 @@
 
   programs.teleport.enable = true;
   programs.home-manager.enable = true;
-
-  catppuccin.enable = true;
-  catppuccin.flavor = "mocha";
-
-  # Enable modules you use — here’s an example for `kitty` and `zsh`
-  catppuccin.kitty.enable = true;
-  # catppuccin.zsh.enable = true;
 
   # used by Godot for project encryption
   home.sessionVariables = {

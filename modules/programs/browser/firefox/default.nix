@@ -444,6 +444,28 @@ in {
                     }
 
                     {
+                      name = "Work";
+                      bookmarks = [
+                        {
+                          name = "Asana";
+                          url = "https://app.asana.com/1/12314323653399/project/1204558549142009/board/1204558555533118";
+                        }
+                        {
+                          name = "new-admin";
+                          url = "https://newadmin.true.nl/";
+                        }
+                        {
+                          name = "salesforce";
+                          url = "https://trueligans.my.salesforce.com/";
+                        }
+                        {
+                          name = "outlook-office";
+                          url = "https://outlook.office.com/mail/";
+                        }
+                      ];
+                    }
+
+                    {
                       name = "NixOS";
                       bookmarks = [
                         {
@@ -476,6 +498,7 @@ in {
                         }
                       ];
                     }
+
                     {
                       name = "Search Engines";
                       bookmarks = [

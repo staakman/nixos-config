@@ -10,6 +10,10 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 -- which-key
 -- for icons see https://www.nerdfonts.com/cheat-sheet
 --            or :NvimWebDeviconsHiTest
+vim.keymap.set('n', '<leader>fgs', function()
+  require('telescope.builtin').live_grep({ cwd = 'src' })
+end, { desc = 'Live grep in src/' })
+
 
 local wk = require("which-key")
 wk.add({
@@ -23,6 +27,7 @@ wk.add({
   { "<leader>f", group = "Telescope", icon="󰭎" }, -- group
   { "<leader>ff", ":Telescope find_files<cr>", desc="find file (cwd)", mode="n", icon="󰈞"},
   { "<leader>fg", ":Telescope live_grep<cr>", desc="grep in files", mode="n", icon="" },
+  { "<leader>fc", function() require('telescope.builtin').live_grep({ cwd = 'src' }) end, desc="grep in files (cwd)", mode="n", icon=""},
   { "<leader>fh", ":Telescope help_tags<cr>", desc="open help tags", mode="n", icon="󰡯" },
   { "<leader>ft", ":TodoTelescope<cr>", desc="open todo list", mode="n", icon="󰨻" },
 
@@ -44,3 +49,23 @@ wk.add({
   -- { "<leader>n", ":NvimTreeToggle<cr>", desc="open explorer (cwd)", mode="n" }, -- TODO
   -- { "<leader>n", ":NvimTreeToggle<cr>", desc="open explorer (cwd)", mode="n" },
 })
+
+--[[
+wk.register({ 
+  {
+    mode = { "o" },
+    { "ac", desc = "Around class (Tree-sitter)" },
+    { "af", desc = "Around function (Tree-sitter)" },
+    { "ic", desc = "Inside class (Tree-sitter)" },
+    { "if", desc = "Inside function (Tree-sitter)" },
+  },
+  
+  {
+    mode = { "o" },
+    { "ac", desc = "Around class (Tree-sitter)" },
+    { "af", desc = "Around function (Tree-sitter)" },
+    { "ic", desc = "Inside class (Tree-sitter)" },
+    { "if", desc = "Inside function (Tree-sitter)" },
+  },
+}
+]]

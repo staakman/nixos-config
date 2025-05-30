@@ -12,12 +12,16 @@ let
 
     # git
     lazygit-nvim
+    # gitblame
 
     # other
     vim-illuminate                    # Highlight same words
 
     plenary-nvim                      # dependency for todo-comments-nvim
     todo-comments-nvim                # Highlights and lists TODO, FIX, HACK
+
+    # ident
+    indent-blankline-nvim-lua         # colorize and visualize identation
 
     # INFO
 
@@ -62,7 +66,7 @@ let
 
     # lexicon analyzer
     nvim-treesitter
-    nvim-treesitter-context
+    # nvim-treesitter-context
     nvim-treesitter-textobjects
     (nvim-treesitter.withPlugins ( p: [
       p.gdscript
@@ -73,6 +77,7 @@ let
       p.bash
       p.regex
       p.nix
+      p.yaml
     ]))
 
   ];

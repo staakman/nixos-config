@@ -46,3 +46,10 @@ require("lspconfig").vimls.setup({
 require("lspconfig").bashls.setup({
   capabilities = capabilities,
 })
+
+-- yaml
+require("lspconfig").yamlls.setup({
+  capabilities = capabilities,
+})
+
+

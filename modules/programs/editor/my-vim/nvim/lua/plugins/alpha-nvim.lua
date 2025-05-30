@@ -5,6 +5,7 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 local button = dashboard.button
+local version = vim.version()
 
 -- Header
 dashboard.section.header.val = {
@@ -56,6 +57,11 @@ dashboard.section.footer = {
     {
       type = "text",
       val = "BottleVim",
+      opts = { position = "center", hl = "Comment" },
+    },
+    {
+      type = "text",
+      val = string.format(" NVIM v%d.%d.%d", version.major, version.minor, version.patch),
       opts = { position = "center", hl = "Comment" },
     },
     {
